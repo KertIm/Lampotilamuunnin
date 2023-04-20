@@ -1,18 +1,18 @@
 
-var tempeature = nameValue; /*test */
-var selected = oForm.elements["tempeature"].selectedIndex;  /**selected type- */
+
+let selected = "tempeature";  /**selected type- */
 let inputCelsius = document.getElementById('celsius'); /** */
 
 
  
 
-function conventer(valnum){
-  if (selected == Celsius){ /*celsius */
+function conventer(value){
+  if (selected == "Celsius"){ /*celsius to- */
     valNum = parseFloat(valNum);
     document.getElementById("muunnettu").innerHTML=(valNum*1.8)+32;
 
-  } else{ /*fahrenheit*/
-
+  } else { /*fahrenheit to-*/
+    document.getElementById("muunnettu").innerHTML=(valNum - 32 / 1.8);  /**lasku tarkista */
   }
 }
 
