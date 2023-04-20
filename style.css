@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Climate+Crisis&family=Josefin+Sans:ital,wght@1,200&display=swap');
+:root{
+    --dark: #464747;
+    --text: #993871;
+    --bg: rgb(101 102 104);
+}
+body {
+    background-color: var(--bg);
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+}
+header{/*otsikko*/
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 3px 3px var(--dark);
+    
+}
+.buttonContainer {
+	margin-top: 5px;
+}
+.button {
+	cursor: pointer;
+	text-align: center;
+	background: #464747;
+	color: #fff;
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+	border: none;
+}
+.Button:hover {
+	opacity: 0.5;
+}

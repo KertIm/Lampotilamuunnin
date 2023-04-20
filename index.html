@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lämpötilamuunnin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    
+    <header>
+    <h1>Lämpötilamuunnin</h1>
+    </header>
+      
+        <div class="one">
+            <select id="tempeature" name="tempeature" class="form-control"> <!--hmmm - add options  to functions?-if lause-->
+                <option value="Celsius">Celsius -> Fahrenheit</option>
+                <option value="Fahrenheit">Fahrenheit -> Celsius</option>
+            </select><br>
+        </div>
+        <p>Syötä lämpötila:</p>
+        <p>
+            <input id="inputCelsius" type="number" placeholder="Celsius" oninput="conventer(this.value)" onchange="conventer(this.value)">    <!--type-makes arrows-->
+        </p>
+        <div class="buttonContainer">
+            <button onclick="conventer(this.value)" class="Button">Muunna</button>
+        </div>
+        <!-- think later
+        <select id="desimaali" name="desimaalit" form="desform">-->
+        <!--<div class="form-des">
+            <input type="radio" name="desimaali" value="1des"> 1 desimaali  <br>
+            <input type="radio" name="desimaali" value="2des"> 2 desimaali  <br>
+            <input type="radio" name="desimaali" value="3des"> 3 desimaali  
+        </div> -->
+        <p>muunnettu: <span id="muunnettu"></span></p>  <!--vastaus -->
+
+        <p> <!--this works-->
+            <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Fahrenheit: <span id="output"></span></p>
+
+        <!--3 test-->
+       
+
+</body>
+</html>
