@@ -23,7 +23,7 @@ header{/*otsikko*/
 .button {
 	cursor: pointer;
 	text-align: center;
-	background: #464747;
+	background: var(--dark);
 	color: #fff;
 	font-size: 17px;
 	font-family: 'Playfair Display', serif;
