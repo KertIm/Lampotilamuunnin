@@ -34,9 +34,23 @@
             <input type="radio" name="desimaali" value="2des"> 2 desimaali  <br>
             <input type="radio" name="desimaali" value="3des"> 3 desimaali  
         </div> -->
+        <div>
+            <input type="radio" name="size" value="1des" id="1des">
+            <label for="1des">1 desimaali</label>
+        </div>
+        <div>
+            <input type="radio" name="size" value="2des" id="2des">
+            <label for="2des">2 desimaali</label>
+        </div>
+        <div>
+            <input type="radio" name="size" value="3des" id="3des">
+            <label for="3des">3 desimaali</label>
+        </div>
+        
         <p>muunnettu: <span id="muunnettu"></span></p>  <!--vastaus -->
 
         <p> <!--this works-->
+            <p>working test-></p>
             <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
         </p>
         <p>Fahrenheit: <span id="output"></span></p>

@@ -20,7 +20,7 @@ header{/*otsikko*/
 .buttonContainer {
 	margin-top: 5px;
 }
-.button {
+.Button {
 	cursor: pointer;
 	text-align: center;
 	background: var(--dark);
@@ -36,4 +36,30 @@ header{/*otsikko*/
 }
 .Button:hover {
 	opacity: 0.5;
+}
+#tempeature{
+	cursor: pointer;
+	text-align: center;
+	background: var(--dark);
+	color: #fff;
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+	border: none;
+}
+#input{
+	cursor: pointer;
+	text-align: center;
+	color: var(--dark);
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 15px;
+	border: none;
 }
