@@ -17,9 +17,6 @@ header{/*otsikko*/
     text-shadow: 3px 3px var(--dark);
     
 }
-.buttonContainer {
-	margin-top: 5px;
-}
 .Button {
 	cursor: pointer;
 	text-align: center;
@@ -37,7 +34,7 @@ header{/*otsikko*/
 .Button:hover {
 	opacity: 0.5;
 }
-#tempeature{
+#temperature{
 	cursor: pointer;
 	text-align: center;
 	background: var(--dark);
@@ -51,15 +48,25 @@ header{/*otsikko*/
 	border-radius: 15px;
 	border: none;
 }
-#input{
+#temperature:hover {
+	opacity: 0.5;
+}
+#inputNum{
 	cursor: pointer;
 	text-align: center;
 	color: var(--dark);
 	font-size: 17px;
 	font-family: 'Playfair Display', serif;
-	
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 15px;
 	border: none;
+}
+#teksti {
+	font-size: 20px;
+}
+@media (max-width: 800px){
+	#otsikko {
+		font-size: 20px;
+	}
 }

@@ -10,52 +10,30 @@
 <body>
     <script src="script.js"></script>
     
-    <header>
-    <h1>Lämpötilamuunnin</h1>
+    <header id="otsikko">
+        <h1>Lämpötilamuunnin</h1>
     </header>
       
         <div class="one">
-            <select id="tempeature" name="tempeature" class="form-control"> <!--hmmm - add options  to functions?-if lause-->
-                <option value="Celsius">Celsius -> Fahrenheit</option>
-                <option value="Fahrenheit">Fahrenheit -> Celsius</option>
+            <select id="temperature" name="temperature" onchange="conventer(this.id)"> 
+                <option value="1">Celsius -> Fahrenheit</option>
+                <option value="2">Fahrenheit -> Celsius</option>
             </select><br>
         </div>
         <p>Syötä lämpötila:</p>
         <p>
-            <input id="input" type="number" placeholder="Celsius" oninput="conventer(this.value)" 
-            onchange="conventer(this.value)">    <!---->
+            <input type="number" id="inputNum" oninput="conventer()" onchange="conventer()" onfocus="this.value = ''" >
+            <div class="buttonContainer">
+                <button  id="convert"  onclick="conventer()" class="Button">Muunna</button>
+            </div>
         </p>
-        <div class="buttonContainer">
-            <button onclick="conventer(this.value)" class="Button">Muunna</button>
+        <div class="form-des">
+            <input type="radio" id="1des" name="desimaali" value="1des"> 1 desimaalia  <br>
+            <input type="radio" id="2des" name="desimaali" value="2des"> 2 desimaalia  <br>
+            <input type="radio" id="3des" name="desimaali" value="3des"> 3 desimaalia  
         </div>
-        <!-- think later-->
-        <!--<div class="form-des">
-            <input type="radio" name="desimaali" value="1des"> 1 desimaali  <br>
-            <input type="radio" name="desimaali" value="2des"> 2 desimaali  <br>
-            <input type="radio" name="desimaali" value="3des"> 3 desimaali  
-        </div> -->
-        <div>
-            <input type="radio" name="size" value="1des" id="1des">
-            <label for="1des">1 desimaali</label>
+        <div id="teksti">
+            <p>muunnettu: <span id="muunnettu"></span></p> 
         </div>
-        <div>
-            <input type="radio" name="size" value="2des" id="2des">
-            <label for="2des">2 desimaali</label>
-        </div>
-        <div>
-            <input type="radio" name="size" value="3des" id="3des">
-            <label for="3des">3 desimaali</label>
-        </div>
-        
-        <p>muunnettu: <span id="muunnettu"></span></p>  <!--vastaus -->
-
-        <p> <!--this works-->
-            <p>working test-></p>
-            <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
-        </p>
-        <p>Fahrenheit: <span id="output"></span></p>
-
-       
-
 </body>
 </html>

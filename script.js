@@ -1,53 +1,44 @@
 
+function conventer(){ 
 
-let selected = "tempeature";  /**selected type- */
-let inputCelsius = document.getElementById('celsius'); /** */
+  var num = document.getElementById("inputNum").value;
+  var valinta = document.getElementById("temperature").value;
 
-/*var type = document.getElementById("input").value; *ssays  null */
-
-/*var firstc = document.getElementById("tempeature").options[0].text;
-var secondf = document.getElementById("tempeature").options[1].text;
-*/
-const desi = ['1des', '2des', '3des']; /**radio options */
-
-
-/*function myFunction() {
-  var x = document.getElementById("tempeature");
-  var i = x.selectedIndex;
-  
-  if(i == 0){
-    conventer();
-    document.getElementById("input").innerHTML = x.options[i].text;
-  } else {
-
-  }
-}* */
-
-
-
-function conventer(valNum){ /**press button always-17 */
-
-var x = document.getElementById("tempeature");
-var txt = "";
-
-/*var x = document.getElementById("mySelect");
-  var i = x.selectedIndex;
-  document.getElementById("demo").innerHTML = x.options[i].text;
-  */
-  if (txt == "Celsius"){ /*celsius to- *//**type or selected var */
-    valNum = parseFloat(valNum);
-    document.getElementById("muunnettu").innerHTML=(valNum * 1.8) + 32;
-
-
+  if (valinta == "1"){ /*c to-f */
     
+    if (num <= -273.15){       
+      document.getElementById("muunnettu").innerHTML=("absoluuttinen nollapiste");
+    } else if(num == "") { 
+      document.getElementById("muunnettu").innerHTML=("kenttä on tyhjä tai ei ole numero");
+    } else {
+      num = parseFloat(num);
+      let lasku = (num * 1.8) + 32 ;
+      desimaali(lasku);
+    }
 
-  } else { /*fahrenheit to-*/ /**always this  */
-    document.getElementById("muunnettu").innerHTML=(5/9) * (valNum - 32);  /**lasku tarkista 98%right*/
-  }
+  } else if(valinta == "2"){ /*f to-c*/ 
+    let lasku = (5/9) * (num - 32) ;
+   
+    if(lasku <= -273.15) { 
+      document.getElementById("muunnettu").innerHTML=("absoluuttinen nollapiste");
+    } else if(num == "") {
+      document.getElementById("muunnettu").innerHTML=("kenttä on tyhjä tai ei ole numero");
+    } else{ 
+      desimaali(lasku);
+    }
+  } 
+  
 }
+function desimaali(lasku){
 
-/*this works */
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("output").innerHTML=(valNum*1.8)+32;
+  if (document.getElementById("2des").checked){
+    let a = lasku.toFixed(2);
+    document.getElementById("muunnettu").innerHTML=a; 
+  } else if(document.getElementById("3des").checked){
+    let a = lasku.toFixed(3);
+    document.getElementById("muunnettu").innerHTML=a;
+  }else{
+    let a = lasku.toFixed(1);
+    document.getElementById("muunnettu").innerHTML=a;
+  }
 }
